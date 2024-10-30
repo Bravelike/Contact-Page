@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./contact-form-icon.svg" alt="bg-image">
+    </header>
+    <div class="header">
+        <h1>Interested in our business pricing?</h1>
+        <p>Fill out the form to view details and we'll contact you as soon as possible.</p>
+    </div>
+    <main>
+        <div class="form-container">
+            <form action="form-action.html" method="post">
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Ethan Johnson">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input type="email" name="name" id="name" placeholder="ethan@johnson.com">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="form-group">
+                        <label for="company-size">Company-Size</label><br>
+                        <select name="company-size" id="company-size">
+                            <option value="50-100">50-100 employees</option>
+                            <option value="100-500">100-500 employees</option>
+                            <option value="500+">500+ employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label><br>
+                        <select id="subject" name="subject" required>
+                            <option value="landing">Building Landing Pages</option>
+                            <option value="website">Website Development</option>
+                            <option value="support">Customer Support</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text-area">Message</label><br>
+                    <textarea name="text-area" id="text-area">50-100 employees</textarea>
+                </div>
+                <button type="submit">Contact Sales</button>
+            </form>
+        </div>
+    
+    </main>
+</body>
+</html>
