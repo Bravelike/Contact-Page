@@ -1,89 +1,137 @@
-body {
-    max-width: 1440px;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+
+    color: white;
+    background: #000;
     background-image: url(./bg-image.svg);
     background-size: cover;
-    box-sizing: border-box;
-    font-family: "Be Vietnam Pro", serif;
-    /* font-weight: 700; */
-    font-style: normal;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    letter-spacing: -0.01em;
+
+
     
-}
-h1,p,img,label,input,button {
-    margin: 0;
-    padding: 0;
 }
 
 header {
-    margin: 20px 0 0 50px;
+    padding: 20px 40px;
+    width: 100%;
 }
+
 .header {
-    max-width: 700px;
-    margin: 0 auto;
-    /* line-height: 1.5; */
-    padding: 0;
-    box-sizing: border-box;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
-.header h1 {
+.page-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.page-text h1 {
     font-size: 4rem;
+    font-weight: bold;
     color: #FFFFFF;
+    line-height: 125%;
+    max-width: 577px;
     text-align: center;
-    margin-bottom: 20px;
 }
-.header p {
+.page-text h2 {
     font-size: 2rem;
+    font-weight: 500;
     color: #F8FAFC;
     text-align: center;
+    line-height: 150%;
+    max-width: 640px;
 }
-main {
-    /* width: 900px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    height: 100vh;
-    box-sizing: border-box;
-}
-.form-container {
-    max-width: 900px;
-    background: rgba(255, 255, 255, 0.1);
+
+ .form-container {
+    margin: 72px 200px;
+    max-width: 810px;
     padding: 32px;
     border-radius: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.2);
 }
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+input[type="text"], input[type="email"], select, textarea,button{
+    width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
+    padding: 24px 22px; 
+    border: 1px solid whitesmoke;
+    border: none;
+    border-radius: 16px;
+    color: #4036A9;
+    background: #F8FAFC;
+}
+
 .input-row {
     display: flex;
-    gap: 2rem;
+    gap: 18px;
     margin-bottom: 20px;
 }
 .form-group {
     flex: 1;
 }
-input[type="text"], input[type="email"], select, textarea,button{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 30px 200px 30px 30px; 
-    border: none;
-    border-radius: 20px;
-    color: #4036A9;
-    background: #F8FAFC;
-}
+
 select{
-    color: #111729;
-    font-family: "Be Vietnam Pro", serif;
-    font-weight: 600;
+    appearance: none;
+    background: #F8FAFC url('./img/Expand_down.svg') no-repeat right 22px center;
+    background-size: 24px;
 }
 label {
     font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 4px;
     color: #F8FAFC;
 }
-textarea {
-    height: 200px;
-    font-family: "Be Vietnam Pro", serif;
+
+::placeholder,select {
+    font-size: 1rem;
     font-weight: 600;
-    color: #111729;
-    margin-bottom: 30px;
-    
+    /* color: black; */
+
+}
+textarea {
+    height: 206px;
+    resize: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.message {
+    margin-bottom: 24px;
 }
 button{
     font-size: 1.25rem;
@@ -91,51 +139,45 @@ button{
     color: #291db3;
     font-weight: 600;
     text-align: center;
-    /* padding-left: 200px; */
-    min-width: 300px;
-    
+    padding: 24px auto;
+}
+select,textarea::placeholder {
+    color: black;
 }
 
 @media (max-width:1024px) {
-    main {
-        margin-top: 50px;
+    header {
+        padding: 24px 0;
+    }
+    .page-text h1{
+        font-size: 3rem;
+    }
+    .page-text h2 {
+        font-size: 1.25rem;
+        max-width: 466px;
     }
     .form-container {
-        max-width: 90%;
+        max-width: 960px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    form {
+        width: 100%;
     }
 }
-@media (max-width:640px)  {
-    body {
-        background-size: cover;
-    }
-    header {
-        margin: 20px 0 0 25px;
-    }
 
-    main {
-        height: 100vh;
-        margin-top: 50px;
-        box-sizing: border-box;
-    }
-
-    .form-container{
-        max-width: 640px;
-        width: 300px;
-        margin-top: 100px;
+@media (max-width: 640px) {
+    .form-container {
+        max-width: 599px;
+        width: 100%;
     }
     .input-row {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
     }
-    .header {
-        margin: 0 auto;
-        max-width: 300px;
-    }
-    .header h1 {
-        font-size: 2rem;
-    }
-    .header p {
-        font-size: 1rem;
+    
+    button {
+        margin-bottom: 100px;
     }
 }
